@@ -1,0 +1,21 @@
+{
+  "name": "Rahul Sharma",
+  "balance": 84500,
+  "creditScore": 742,
+  "transactions": [
+    { "merchant": "Swiggy", "amount": 420, "category": "Food" },
+    { "merchant": "Zomato", "amount": 650, "category": "Food" },
+    { "merchant": "Netflix", "amount": 499, "category": "Subscription" },
+    { "merchant": "Amazon EMI", "amount": 2500, "category": "EMI" },
+    { "merchant": "Uber", "amount": 300, "category": "Travel" },
+    { "merchant": "Electricity Bill", "amount": 1800, "category": "Bills" }
+  ],
+  "activeEMIs": [
+    { "name": "Amazon iPhone EMI", "amount": 2500 },
+    { "name": "Bike Loan EMI", "amount": 3200 }
+  ],
+  "subscriptions": [
+    { "name": "Netflix", "amount": 499 },
+    { "name": "Spotify", "amount": 119 }
+  ]
+}
