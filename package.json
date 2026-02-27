@@ -6,12 +6,7 @@
     "start": "node server.js"
   },
   "dependencies": {
-<<<<<<< HEAD
     "express": "^4.18.2",
-=======
-     "express": "^4.18.2",
->>>>>>> 003dcca (fix: add node-fetch)
-  "cors": "^2.8.5",
-  "node-fetch": "^3.3.2"
+    "cors": "^2.8.5"
   }
 }
