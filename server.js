@@ -10,7 +10,7 @@ app.use(express.json());
 // Initialize Gemini API
 const genAI = new GoogleGenerativeAI(process.env.GEMINI_API_KEY);
 const model = genAI.getGenerativeModel({ 
-  model: "gemini-1.5-flash",
+  model: "gemini-1.5-flash-latest",
   // Safety settings: Ensure it doesn't block helpful banking info
   generationConfig: {
     temperature: 0.7,
