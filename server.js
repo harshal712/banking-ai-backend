@@ -54,15 +54,23 @@ User question: ${userMessage}
 
     const data = await geminiRes.json();
 
-    const reply =
-      data?.candidates?.[0]?.content?.parts?.[0]?.text ||
-      "Sorry, I could not understand.";
+console.log("Gemini raw response:", JSON.stringify(data));
 
-    res.json({ reply });
-  } catch (err) {
-    console.error("Gemini error:", err);
-    res.status(500).json({
-      reply: "AI service temporarily unavailable.",
+let reply = "Sorry, I could not understand.";
+
+if (
+  data &&
+  data.candidates &&
+  data.candidates.length > 0 &&
+  data.candidates[0].content &&
+  data.candidates[0].content.parts &&
+  data.candidates[0].content.parts.length > 0 &&
+  data.candidates[0].content.parts[0].text
+) {
+  reply = data.candidates[0].content.parts[0].text;
+}
+
+res.json({ reply });
     });
   }
 });
